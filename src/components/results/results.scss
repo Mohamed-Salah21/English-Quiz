@@ -1,0 +1,188 @@
+.results {
+  padding: 0 50px;
+  .results-introductions {
+    h4 {
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    p {
+      margin: 15px 0;
+      font-size: 15px;
+    }
+    h4 span:first-of-type {
+      font-weight: normal;
+    }
+    h4 span:last-of-type {
+      text-transform: capitalize;
+      font-weight: normal;
+      color: #f2662c;
+    }
+  }
+  .over-scores {
+    background-color: #eff3f6;
+    background-color: #11111a1a;
+    padding: 15px 10px;
+    margin: 20px 0;
+    position: relative;
+    span:first-of-type {
+      color: #f2662c;
+      font-weight: bold;
+      font-size: 15.5px;
+      margin-right: 14px;
+    }
+    article {
+      position: absolute;
+      bottom: 2px;
+      right: 5px;
+      font-size: 12px;
+    }
+  }
+  .certificate {
+    border: 1px solid #11111a1a;
+    border-radius: 3px;
+    padding: 20px 20px 0;
+    header {
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: center;
+      .certificate-h4 {
+        display: inline;
+        position: relative;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        word-spacing: 5px;
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -15px;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          background-color: #11111a1a;
+        }
+      }
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 0;
+      &:not(:first-of-type) {
+        border-top: 1px solid #11111a1a;
+      }
+      .parcent {
+        width: 200px;
+        position: relative;
+        border-radius: 4px;
+        height: 15px;
+        border: 1px solid #11111a1a;
+        background-color: #11111a1a;
+        .rate {
+          border-radius: 4px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          background-color: red;
+          width: 30%;
+        }
+        span {
+          position: absolute;
+          right: 0;
+          top: -130%;
+          font-size: 14px;
+        }
+      }
+    }
+    .item:first-of-type {
+      .rate {
+        background-color: #99bf47;
+      }
+    }
+    .item:nth-of-type(2) .rate {
+      background-color: #EB964E;
+    }
+    .item:last-of-type .rate {
+      background-color: #00a3e7;
+    }
+  }
+  button {
+    margin-top: 25px;
+    width: 120px;
+    height: 35px;
+    position: relative;
+    transition: transform 0.5s, box-shadow 0.5s 0.3s;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #555;
+    border-radius: 2.5px;
+    overflow: hidden;
+    &:before {
+      position: absolute;
+      content: "RESTART QUIZ";
+      left: 0;
+      top: -100%;
+      height: 100%;
+      width: 100%;
+      background-color: #555;
+      border: 1px solid #555;
+      color: #fff;
+      transition: all 0.5s;
+      border-radius: 2.5px;
+      line-height: 33px;
+      font-size: 14px;
+    }
+    &:after {
+      position: absolute;
+      content: "RESTART QUIZ";
+      line-height: 33px;
+      left: 0;
+      top: 0;
+      color: #000;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      transition: color 0.5s 0.3s;
+      font-size: 14px;
+      transition: all 0.5s;
+      background-color: #fff;
+    }
+    &:hover {
+      &:before {
+        top: 0;
+      }
+      &:after {
+        top: 100%;
+        color: #fff;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .results {
+    padding: 25px 0;
+    width: 100%;
+    .over-scores {
+      article {
+        top: 5px;
+      }
+      span:last-of-type {
+        display: block;
+        margin-top: 3px;
+      }
+    }
+    .certificate .item {
+      display: block;
+      &:not(:first-of-type) {
+        padding-top: 23px;
+      }
+      .parcent {
+        width: 100%;
+        margin-top: 2px;
+        span { 
+          top : -17px;
+        }
+      }
+    }
+  }
+}

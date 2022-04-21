@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Roboto&family=Tajawal:wght@300&display=swap");
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+.App {
+  background-color: #cfe5f0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
